@@ -1,4 +1,4 @@
-FROM       adgico/teamcity-9.1-agent-gcc-4.9
+FROM       adgico/teamcity-9.x.y-agent-gcc-4.9
 MAINTAINER Byran Wills-Heath <byran@adgico.co.uk>
 
 RUN cd / &&\
@@ -6,6 +6,5 @@ RUN cd / &&\
 cp -r /clang+llvm-3.6.2-x86_64-linux-gnu-ubuntu-14.04/* /usr/ &&\
 rm -rf /clang+llvm-3.6.2-x86_64-linux-gnu-ubuntu-14.04
 
-RUN update-alternatives --install /usr/bin/g++ g++ /usr/bin/clang++ 20 
+RUN update-alternatives --install /usr/bin/g++ g++ /usr/bin/clang++ 20
 RUN update-alternatives --install /usr/bin/gcc gcc /usr/bin/clang 20
-
